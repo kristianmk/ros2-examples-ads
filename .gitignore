@@ -1,3 +1,7 @@
+/ads_example_package/build/
+/ads_example_package/install/
+/ads_example_package/log/
+
 # Prerequisites
 *.d
 
