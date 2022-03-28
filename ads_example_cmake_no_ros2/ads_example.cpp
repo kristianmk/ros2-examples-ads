@@ -110,7 +110,7 @@ static void readStateExample(std::ostream& out, const AdsDevice& route)
 
 static void runExample(std::ostream& out)
 {
-    static const AmsNetId remoteNetId { 192, 168, 0, 231, 1, 1 };
+    static const AmsNetId remoteNetId { 192, 168, 56, 1, 1, 1 };
     static const char remoteIpV4[] = "ads-server";
 
     // uncomment and adjust if automatic AmsNetId deduction is not working as expected
