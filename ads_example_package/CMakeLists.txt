@@ -7,18 +7,37 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+
+# Posix threads
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+
+# ADS library from Beckhoff (assumed pre-built, follow the instructions in git submodule ADS).
+find_library(
+    LIBADS_LIBRARY
+    NAMES AdsLib
+    HINTS "../ADS/build"
+)
+
+
 
 add_executable(ads_node src/ads_node.cpp)
+
+
+target_compile_features(ads_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+
 target_include_directories(ads_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
-target_compile_features(ads_node PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+target_include_directories(ads_node PRIVATE "../ADS/AdsLib")
+
+target_link_libraries(ads_node PUBLIC ${LIBADS_LIBRARY} Threads::Threads)
+
 
 install(TARGETS ads_node
   DESTINATION lib/${PROJECT_NAME})
+
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
