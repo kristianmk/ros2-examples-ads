@@ -38,9 +38,9 @@ Build instructions for ROS2 node example:
 0. Make sure you have ROS2 installed.
 1. Navigate to the `ads_example_package` folder.
 2. Edit the ADS example to reflect a correct remote IP and remote AMS net id.
-3. Source ROS2 underlay (for example if using a bash terminal and a custom built ROS2: <br />`. ~/ros2_galactic/install/local_setup.bash`).
+3. Source ROS2 underlay (for example if using a bash terminal and a custom built ROS2: <br />`. ~/ros2_galactic/install/local_setup.bash`.
 4. Build using `colcon build`.
-5. Source ROS2 overlay (for example, if using a bash terminal: `. install/local_setup.bash`).
+5. Source ROS2 overlay (for example, if using a bash terminal: `. install/local_setup.bash`.
 6. Run the node with `ros2 run ads_example_package ads_node`.
 
 Exception handling was not included in this example; all ADS operations that could throw exceptions should be handled; see example in the ADS example without ROS2 from Beckhoff.
