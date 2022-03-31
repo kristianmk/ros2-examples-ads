@@ -8,10 +8,10 @@ See also:
 https://infosys.beckhoff.com/english.php?content=../content/1033/tcadsamsspec/html/tcadsamsspec_intro.htm
 
 
-
+<br />
 Tested using Ubuntu 20.04.4 LTS.
 
-
+<br /><br />
 Build instructions for ADS library (do this first):
 
 1. Navigate to a suitable location, for example `cd ~/projects/`.
@@ -20,11 +20,24 @@ Build instructions for ADS library (do this first):
 3. Go to the ADS subfolder; build the ADS library. First `meson build` then `ninja -C build`. Error-like message "Library&nbsp;ws2_32&nbsp;found:&nbsp;NO" is OK when we are running meson build on Linux, as ws2_32 is the MS Windows sockets library (we don´t need/want that anyways).
 4. Go back to the main ros-examples-ads folder.
 
-
-Build instructions for ADS example without ROS2:
+<br /><br />
+Build instructions for ADS example without ROS2 (example more or less identical to the official Beckhoff example program):
 
 1. Navigate to the `ads_example_cmake_no_ros2` folder.
 2. Edit the ADS example to reflect a correct remote IP and remote AMS net id.
 3. Run `cmake .` then `make`.
 `git clone --recurse-submodules git@github.com:kristianmk/ros2-examples-ads.git`.
 4. Test the ads_example program.
+
+
+<br /><br />
+Build instructions for ROS2 node example:
+0. Make sure you have ROS2 installed.
+1. Navigate to the `ads_example_package` folder.
+2. Edit the ADS example to reflect a correct remote IP and remote AMS net id.
+3. Source ROS2 underlay (for example if using a bash terminal and a custom built ROS2: `. ~/ros2_galactic/install/local_setup.bash`).
+4. Build using `colcon build`.
+5. Source ROS2 overlay (for example, if using a bash terminal: `. install/local_setup.bash`).
+6. Run the node with `ros2 run ads_example_package ads_node`.
+
+Exception handling was not included in this example; all ADS operations that could throw exceptions should be handled; see example in the ADS example without ROS2 from Beckhoff.
