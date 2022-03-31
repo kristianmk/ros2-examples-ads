@@ -26,16 +26,16 @@ Build instructions for ADS example without ROS2 (example more or less identical 
 1. Navigate to the `ads_example_cmake_no_ros2` folder.
 2. Edit the ADS example to reflect a correct remote IP and remote AMS net id.
 3. Run `cmake .` then `make`.
-`git clone --recurse-submodules git@github.com:kristianmk/ros2-examples-ads.git`.
 4. Test the ads_example program.
 
 
 <br /><br />
 Build instructions for ROS2 node example:
+
 0. Make sure you have ROS2 installed.
 1. Navigate to the `ads_example_package` folder.
 2. Edit the ADS example to reflect a correct remote IP and remote AMS net id.
-3. Source ROS2 underlay (for example if using a bash terminal and a custom built ROS2: `. ~/ros2_galactic/install/local_setup.bash`).
+3. Source ROS2 underlay (for example if using a bash terminal and a custom built ROS2: <br />`. ~/ros2_galactic/install/local_setup.bash`).
 4. Build using `colcon build`.
 5. Source ROS2 overlay (for example, if using a bash terminal: `. install/local_setup.bash`).
 6. Run the node with `ros2 run ads_example_package ads_node`.
