@@ -9,7 +9,7 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tcadsamsspec/ht
 
 
 <br />
-Tested using Ubuntu 20.04.4 LTS.
+Tested using Ubuntu 20.04.4 LTS. For MAS418 2023v use Ubuntu 22.04.2 LTS.
 
 <br /><br />
 Build instructions for ADS library (do this first):
