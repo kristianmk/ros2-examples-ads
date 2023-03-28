@@ -16,7 +16,7 @@ Build instructions for ADS library (do this first):
 
 1. Navigate to a suitable location, for example `cd ~/projects/`.
 2. Clone the project _including submodules_ in your selected location:
-<br />`git clone --recurse-submodules git@github.com:kristianmk/ros2-examples-ads.git`.
+<br />`git clone --recurse-submodules git@github.com:kristianmk/ros2-examples-ads.git`. (or https://github.com/kristianmk/ros2-examples-ads.git)
 3. Go to the ADS subfolder; build the ADS library. Build as described in the ADS library README-file: First `meson build` then `ninja -C build`. Error-like message "Library&nbsp;ws2_32&nbsp;found:&nbsp;NO" is OK when we are running meson build on Linux, as ws2_32 is the MS Windows sockets library (we don´t need/want that anyways).
 4. Go back to the main ros-examples-ads folder.
 
