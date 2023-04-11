@@ -43,4 +43,4 @@ Build instructions for ROS2 node example:
 5. Source ROS2 overlay (for example, if using a bash terminal: `. install/local_setup.bash`.
 6. Run the node with `ros2 run ads_example_package ads_node`.
 
-Exception handling was not included in this example; all ADS operations that could throw exceptions should be handled; see error handling in the ADS example without ROS2 from Beckhoff.
+Exception handling was not included in this example; all ADS operations that could throw exceptions should be handled; see error handling in the ADS example without ROS2 from Beckhoff. See https://isocpp.org/wiki/faq/exceptions#why-exceptions to understand why you should know exceptions in C++.
