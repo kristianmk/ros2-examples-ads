@@ -5,7 +5,7 @@ ADS - Automation Device Specification<br />
 AMS - Automation Message Specification
 
 See also:
-https://infosys.beckhoff.com/english.php?content=../content/1033/tcadsamsspec/html/tcadsamsspec_intro.htm
+https://infosys.beckhoff.com/content/1033/tc3_ads_intro/116158859.html
 
 
 <br />
